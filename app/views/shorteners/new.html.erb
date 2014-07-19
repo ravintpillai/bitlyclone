@@ -1,0 +1,10 @@
+<h1>Create a New Shortener</h1>
+<%= form_for @shortener do |s| %>
+	<fieldset>
+		<div class='fields'>
+		<%= s.label :target_url %>
+		<%= s.text_field :target_url %>
+		</div>
+	</fieldset>
+	<%= s.submit %>
+<% end %>

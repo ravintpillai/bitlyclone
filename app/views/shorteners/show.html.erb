@@ -1,0 +1,4 @@
+<h1>Shortener for <%= @shortener.target_url %> </h1>
+<h2><%= @shortener.target_url %> </h2>
+<h2><%= @shortener.code %> </h2>
+<p><%= link_to "localhost:3000/#{@shortener.code}", "/#{@shortener.code}" %></P>

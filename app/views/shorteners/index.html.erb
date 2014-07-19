@@ -1,0 +1,7 @@
+<h1>Url Shorteners!</h1>
+<hr>
+<% @shorteners.each do |s| %>
+    <p>Target Url: <%= s.target_url %></p>
+    <p>Code: <%= s.code %></p>
+  <hr>
+<% end %>
