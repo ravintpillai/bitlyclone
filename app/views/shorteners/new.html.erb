@@ -1,3 +1,13 @@
+
+<% if @shortener.errors.any? %>
+  <h2>There were errors saving your shirt</h2>
+  <ul>
+    <% @shortener.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h1>Create a New Shortener</h1>
 <%= form_for @shortener do |s| %>
 	<fieldset>
