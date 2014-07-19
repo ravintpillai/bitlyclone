@@ -5,8 +5,13 @@ class ShortenersController < ApplicationController
 	end
 
 	def visit_shortened_link
-		@shortener = Shortener.find_by_code(params[:code])
-		redirect_to @shortener.target_url
+		@shortener = Shortener.find_by code: params[:code]
+		if @shortener
+			redirect_to @shortener.target_url
+		else
+			flash[:error] = "Link not valid"
+			redirect_to new_shortener_path
+		end
 	end
 
 	def new
