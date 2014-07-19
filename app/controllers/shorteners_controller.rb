@@ -1,9 +1,5 @@
 class ShortenersController < ApplicationController
 
-	def index
-		@shorteners = Shortener.all
-	end
-
 	def show
 		@shortener = load_shortener
 	end
